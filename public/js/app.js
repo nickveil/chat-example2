@@ -1899,6 +1899,17 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/laravel-echo/dist/echo.js":
+/*!************************************************!*\
+  !*** ./node_modules/laravel-echo/dist/echo.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/nickveil/practice/chatdemo/node_modules/laravel-echo/dist/echo.js'");
+
+/***/ }),
+
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -19330,7 +19341,34 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+window.Vue = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component('example-component', __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/ExampleComponent.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"]);
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+var app = new Vue({
+  el: '#app'
+});
 
 /***/ }),
 
@@ -19338,15 +19376,31 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var laravel_echo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! laravel-echo */ "./node_modules/laravel-echo/dist/echo.js");
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.Popper = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'popper.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"];
+  window.$ = window.jQuery = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'jquery'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+  __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'bootstrap'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+} catch (e) {}
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -19355,14 +19409,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
-// import Echo from 'laravel-echo';
-// window.Pusher = require('pusher-js');
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
-// });
+
+ // window.Pusher = require('pusher-js');
+
+window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  broadcaster: 'pusher',
+  key: "",
+  cluster: "mt1",
+  forceTLS: true
+});
 
 /***/ }),
 
@@ -19373,7 +19428,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n  ╷\n8 │ @import '~bootstrap/scss/bootstrap';\n  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  ╵\n  /Users/nickveil/practice/chatdemo/resources/sass/app.scss 8:9  root stylesheet\n    at /Users/nickveil/practice/chatdemo/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/nickveil/practice/chatdemo/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/nickveil/practice/chatdemo/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/nickveil/practice/chatdemo/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/nickveil/practice/chatdemo/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:88191:16)\n    at _render_closure1.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:77610:12)\n    at _RootZone.runBinary$3$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24725:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24117:12)\n    at Object._asyncRethrow (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:14087:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24138:12)\n    at _awaitOnObject_closure0.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24130:25)\n    at _RootZone.runBinary$3$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4311:88)\n    at _Future._completeError$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24725:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24117:12)\n    at Object._asyncRethrow (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4065:17)\n    at /Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:16672:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4090:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24138:12)\n    at _awaitOnObject_closure0.call$2 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24130:25)\n    at _RootZone.runBinary$3$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26152:18)\n    at _RootZone.runBinary$3 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:26156:19)\n    at _FutureListener.handleError$1 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24600:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:24897:40)\n    at Object._Future__propagateToListeners (/Users/nickveil/practice/chatdemo/node_modules/sass/sass.dart.js:4311:88)");
 
 /***/ }),
 
